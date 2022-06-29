@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShortCuts</title>
+</head>
+<body>
+  <h1>Key board Shortcuts</h1>
+  <h2>Ctrl s for one alert</h2>
+  <h2>Ctrl a for second alert</h2>
+  <input type="text" placeholder="Type here" id="input"/>
+</body>
+<script type="text/javascript">
+  var input = document.getElementById("input")
+  // alert("hey")
+  document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && String.fromCharCode(e.keyCode).toLowerCase() === 's') {
+    e.preventDefault();
+    e.stopPropagation();
+    // Do some stuff...
+    alert("hey there")
+  }
+}, false);
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && String.fromCharCode(e.keyCode).toLowerCase() === 'a') {
+    e.preventDefault();
+    e.stopPropagation();
+    // Do some stuff...
+    alert("hello how is it going")
+  }
+}, false);
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && String.fromCharCode(e.keyCode).toLowerCase() === 'i') {
+    e.preventDefault();
+    e.stopPropagation();
+    // Do some stuff...
+    alert(input.value)
+  }
+}, false);
+
+
+</script>
+</html>
